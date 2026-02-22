@@ -18,5 +18,6 @@ function ativarMenu() {
   }
 }
 
-loadComponent("navbar", "components/navebar.html", ativarMenu);
+loadComponent("navebar", "components/navebar.html", ativarMenu);
 loadComponent("footer", "components/footer.html");
+
