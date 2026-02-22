@@ -6,5 +6,6 @@ function loadComponent(id, file) {
     });
 }
 
-loadComponent("navebar", "/components/navebar.html");
-loadComponent("footer", "/components/footer.html");
+loadComponent("navebar", "components/navebar.html");
+
+loadComponent("footer", "components/footer.html");
