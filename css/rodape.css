@@ -1,0 +1,100 @@
+.footer{
+  background:#111;
+  color:#eee;
+  padding-top:50px;
+  font-size:15px;
+}
+
+.footer a{
+  color:#ccc;
+  text-decoration:none;
+}
+
+.footer a:hover{
+  color:#2e7d32;
+}
+
+/* GRID */
+.footer-container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+
+/* TITULOS */
+.footer-col h2,
+.footer-col h3{
+  margin-bottom:15px;
+  color:white;
+}
+
+/* TEXTO */
+.footer-col p{
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+/* LISTA */
+.footer-col ul{
+  list-style:none;
+}
+
+.footer-col ul li{
+  margin-bottom:8px;
+}
+
+/* BOTÃO */
+.footer-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 22px;
+  background:#2e7d32;
+  color:white;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+/* MAPA */
+.footer-col iframe{
+  width:100%;
+  height:150px;
+  border:0;
+  margin-top:10px;
+  border-radius:8px;
+}
+
+/* BASE */
+.footer-bottom{
+  margin-top:40px;
+  background:#000;
+  text-align:center;
+  padding:20px 10px;
+  font-size:14px;
+}
+
+/* 📱 TABLET */
+@media(max-width:900px){
+  .footer-container{
+    grid-template-columns:repeat(2,1fr);
+    text-align:center;
+  }
+}
+
+/* 📱 CELULAR */
+@media(max-width:600px){
+  .footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .footer{
+    font-size:14px;
+  }
+
+  .footer-col iframe{
+    height:200px;
+  }
+}

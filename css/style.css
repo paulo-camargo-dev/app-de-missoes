@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;          /* largura menor */
+  max-width: 1100px;   /* limite máximo */
+  height: 500px;       /* altura menor */
+  margin: 60px auto;   /* CENTRALIZA */
+  overflow: hidden;
+  border-radius: 20px; /* opcional */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* opcional */
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+}
+
+.content {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  max-width: 600px;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+.content button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  height: 12px;
+  width: 12px;
+  background: white;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.dots .active {
+  opacity: 1;
+}
+
+.comentarios {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.comentarios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* PC = 3 lado a lado */
+    gap: 25px;
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.card-comentario {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* FOTO */
+.card-comentario img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* 📲 TABLET */
+@media (max-width: 900px) {
+    .comentarios-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 📱 CELULAR */
+@media (max-width: 600px) {
+    .comentarios-container {
+        grid-template-columns: 1fr;
+    }
+}
+.card-comentario:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}

@@ -1,0 +1,69 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribua</title>
+
+    <link rel="stylesheet" href="css/navebar.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/contribuir.css">
+    </head>
+
+    <body>
+
+    <div id="navebar"></div>
+
+    <section class="doacao">
+
+    <h1>Contribua com esta missão 🙏</h1>
+    <p>Sua oferta nos ajuda a levar esperança e o amor de Cristo.</p>
+
+    <div class="doacao-container">
+
+        <!-- PIX -->
+        <div class="card-doacao">
+        <h2>PIX</h2>
+
+        <p class="chave">chavepix@email.com</p>
+
+        <button onclick="copiarPix()">Copiar chave PIX</button>
+
+        <img src="imagens/qr.png" alt="QR Code PIX">
+
+        <p>Escaneie para contribuir</p>
+        </div>
+
+        <!-- DADOS BANCÁRIOS -->
+        <div class="card-doacao">
+        <h2>Transferência Bancária</h2>
+
+        <p><strong>Banco:</strong> 000 - Banco Exemplo</p>
+        <p><strong>Agência:</strong> 0000</p>
+        <p><strong>Conta:</strong> 00000-0</p>
+        <p><strong>Tipo:</strong> Corrente</p>
+        <p><strong>Favorecido:</strong> Ministério Missões</p>
+        <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+        </div>
+
+    </div>
+
+    </section>
+
+
+
+    <script src="js/include.js"></script>
+
+    <script>
+    function copiarPix() {
+    navigator.clipboard.writeText("chavepix@email.com");
+    alert("Chave PIX copiada!");
+    }
+    </script>
+
+    </body>
+    </html>
+        
+    </body>
+</html>
